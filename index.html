@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🏰 Mój Serwer Minecraft</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: Arial, sans-serif;
+      background-color: #1e1e1e;
+      color: #fff;
+    }
+
+    /* gradientowy nagłówek */
+    header {
+      background: linear-gradient(90deg, #FFA500, #FFE692, #FFA500);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 3em;
+      color: #1e1e1e;
+      margin-bottom: 15px;
+    }
+
+    .server-info {
+      display: inline-block;
+      background-color: #333;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-size: 1.2em;
+    }
+
+    /* Kontener główny */
+    .container {
+      position: relative;
+      height: calc(100vh - 150px); /* zostaje miejsce na nagłówek */
+      display: flex;
+      justify-content: center;    /* wyśrodkowanie tekstu poziomo */
+      align-items: center;        /* wyśrodkowanie tekstu pionowo */
+      text-align: center;
+      padding: 20px;
+    }
+
+    /* obrazek po lewej przy brzegu */
+    .side-image {
+      position: absolute;
+      left: 20px;                   /* przesunięcie od lewej krawędzi */
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(10deg);
+      transform-origin: center center; /* powiększenie od środka obrazka */
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .side-image:hover {
+      transform: translateY(-50%) rotate(-10deg) scale(1.1); /* wysunięcie */
+    }
+
+    /* wyśrodkowany tekst */
+    .center-text {
+      max-width: 600px;
+      z-index: 1;                  /* zeby tekst był nad obrazkiem jeśli sie naklada */
+    }
+
+    .center-text h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #FFA500;
+    }
+    .center-text h3 {
+      font-size: 1.8em;
+      margin-bottom: 16px;
+      color: ##FFFFFF;
+    }
+
+    .center-text p {
+      font-size: 1.2em;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .center-text a {
+      color: #00ff99;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight:
+    }
+
+    .center-text a:hover {
+      text-decoration: underline;
+    }
+    nav {
+      background-color: #222;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: #00ff99;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+   nav a:hover {
+     text-decoration: underline;
+    }
+    footer {
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+    }
+
+    /* responsywność */
+    @media (max-width: 768px) {
+      .side-image {
+        position: static;
+        transform: rotate(0deg);
+        width: 70%;
+        margin-bottom: 20px;
+      }
+
+      .container {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .center-text {
+        max-width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Gradientowy nagłówek z IP -->
+  <header>
+    <h1>TotCraft.pl</h1>
+    <div class="server-info">IP: <b>totcraft.pl</b> | Wersja: 1.16+</div>
+  </header>
+
+  <!-- Sekcja główna -->
+  <div class="container">
+    <img src="totem.png" alt="Totem serwera" class="side-image">
+    <div class="center-text">
+      <h2>ᴏ ꜱᴇʀᴡᴇʀᴢᴇ</h2>
+      <p>TotCraft to sieć serwerów Minecraft, idealna dla osób które nie szukają tłoku  i trybów z setkami ludzi.</p>
+      <p>Kierujemy się prostotą i minimalistycznością.</p>
+      <p>Oferujemy tryby:</p>
+      <p>Survival - działki, ekonomia, skille</p>
+      <p>OneBlock - wyspy, ekoniomia, rozbudowane PvP</p>
+      <p>KitPvP - wkrótce</p>
+      <p>Cenimy luźną atmosfere, bardzo restrekcyjny i bezpośredni regulamin jeżeli chodzi o agresywność słowną.</p>
+      <p>Chcemy być jak najbliżej społeczności, zawsze możes na nas liczyć.</p>
+      <p>To tyle, serdecznie zapraszamy.</p>
+      <p>
+      <h3>🔗 Strony</h3>
+        <a href="https://discord.com/invite/G39Asfxmr9">🌐 Discord</a> |
+        <a href="https://vishop.pl/shop/23744/server/22680">✨ Sklep</a>
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    © totcraft.pl - wszelkie prawa zastrzeżone
+  </footer>
+
+</body>
+</html>
